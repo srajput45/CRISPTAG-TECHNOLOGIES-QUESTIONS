@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+   </head>
+   <body>
+    <div id="app">	
+        <input v-model="myString" @change="myFunction()" placeholder="Enter the string">
+        <p>converted String is: {{ myString }}</p>
+    </div>
+    <script>
+     new Vue({
+        el: '#app',
+          
+          data: { 
+        	  myString:"",
+          },
+          
+           methods:{
+            myFunction: function () {	
+        		this.myString = this.myString.toUpperCase();
+            }
+           }      
+        });
+    </script>
+   </body>
+</html>
